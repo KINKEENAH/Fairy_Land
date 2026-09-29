@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Lora", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-paper: #fbf8f3;
+  --color-ink: #2b2622;
+  --color-accent: #8a5a44;
+}
+@layer components {
+  .chapter-text {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    line-height: 1.85;
+  }
+
+  .chapter-text p {
+    margin-block: 1.25em;
+  }
+
+  .chapter-text em {
+    font-style: italic;
+  }
+
+  .chapter-text strong {
+    font-weight: 600;
+  }
+
+  .chapter-text hr {
+    border: 0;
+    margin-block: 2.5em;
+    text-align: center;
+  }
+
+  .chapter-text hr::after {
+    content: "* * *";
+    letter-spacing: 0.5em;
+    color: var(--color-accent);
+  }
+}
